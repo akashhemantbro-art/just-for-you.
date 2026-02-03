@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine</title>
+
+<style>
+body {
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#ffdce5;
+  font-family:'Segoe UI',sans-serif;
+  overflow:hidden;
+}
+
+.container,.success {
+  text-align:center;
+}
+
+h1 {
+  font-size:48px;
+  color:#b1002e;
+}
+
+h2 {
+  font-size:28px;
+  color:#b1002e;
+}
+
+.buttons {
+  margin-top:40px;
+  display:flex;
+  gap:20px;
+  justify-content:center;
+}
+
+button {
+  padding:18px 45px;
+  border-radius:40px;
+  border:none;
+  font-size:22px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+#yes {
+  background:#ff004c;
+  color:white;
+  box-shadow:0 6px 15px rgba(0,0,0,.25);
+}
+
+#no {
+  background:white;
+  color:#ff004c;
+  border:3px solid #ff004c;
+  box-shadow:0 6px 15px rgba(0,0,0,.2);
+}
+
+.quote {
+  margin-top:40px;
+  font-size:18px;
+  color:#b1002e;
+  font-style:italic;
+}
+
+/* fire pop */
+
+.pop {
+  position:absolute;
+  width:20px;
+  height:20px;
+  background:#ff004c;
+  border-radius:50%;
+  animation:explode .8s forwards;
+}
+
+@keyframes explode {
+ to {
+   transform:scale(8);
+   opacity:0;
+ }
+}
+
+/* success */
+
+.success {
+  display:none;
+}
+
+.success img {
+  width:350px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  margin-top:20px;
+}
+
+/* gif */
+
+#sadGif {
+  position:fixed;
+  width:130px;
+  display:none;
+  pointer-events:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="main">
+
+<!-- <h1>❤️ Shayqua ❤️</h1>
+<h2>Will you be my Valentine? 💖</h2>
+
+<div class="buttons">
+  <button id="yes">Yes 💕</button>
+  <button id="no">No</button>
+</div>
+
+<div class="quote">
+"Every moment with you feels like a dream come true..."
+</div> -->
+<h1>meriiiii pyaari jaaannnnn 🤭💖 urf meriiii ghopluuuuuuu babuuuu 💋🧿💗</h1>
+<h2>Ayee Meriii chikniii kuchuuu puchuuu 🤪✋🏻<br>valentine banegi kyaa meri??? 🥺👉🏻👈🏻 haaannn kehde 🫠 40 saal bita le mere saathh 🤭✋🏻</h2>
+
+
+<div class="buttons">
+  <button id="yes"> ofcccc Babuuu  whyy nottt ye bhi koii pychne ki baat hain  🤭😘 </button>
+  <button id="no"> nhi ji merko zaroorat nhi hain aapki aap bohot zyada saduuu ho ek number ke 😒✋🏻</button>
+  </button>
+</div>
+
+<div class="quote">
+warning: Agar mana kiya toh dil toot jaayega 🥺💔 mera 👉🏻👈🏻 shonuuu betuuu meraaa 🥺 matt karo naa naa pleamseeeee 🥺 👉🏻 👈🏻 
+</div>
+
+
+</div>
+
+<div class="success" id="success">
+<h1>Hehehehehehe 🤭💖</h1>
+<h2>lessss gooooo aise hi todhi tadpaaoge merko 🤪✋🏻 </h2>
+<p> mujhe toh pata hi tha 👉🏻👈🏻 mana karr hi nhi skte 🤭✨</p>
+<p>Main hoon hi aisa babyyyyyy 😎✋🏻</p>
+<p>I loveeeeeeee youuuuuuu 🤭😘✨ Uuuuuumaaaaaahhhh 💋💖✨</p>
+<p>Ab hoga romance bohot saaraaa 😋 💋 👉🏻👈🏻</p>
+<p>🥺 Ohhh noo bajrangdal spotted 💔 😎✋🏻 Inki aesi ki tesi</p>
+<p>Tum bhojpuri si chanchal priye 🫠💗✨<br/>Main maithili sa shaant priye 🫠💖✨</p>
+<p>Ye joh hain humara sangam priye 👉🏻👈🏻<br/>Bane pyaara sa bihar priye 🫂🛐🧿💖✨</p>
+<p>Tum Parvati si komal 🫠💖<br/>Main shiv sa vikraal priye 🌸✨</p>
+<p>Tum se main mujh se tum 🎀💖<br/>Humse hi ye sansaar priye 🫠💗✨</p>
+<p>Thankyouuuu you so muchhh for being a part of my life 💖 aur meri life hi banne ke liye 💗✨</p>
+<p>Ye humara first valentine hain 💖 aise toh bohot aayenge 🤭✋🏻<br/>Safar lamba hain, haath matt chhodna 🤭💋</p>
+<p>Exam hain ik abhi, nahi mana paaye koi baat nahi 💋🫂✨<br/>Ache se padhiye ✨</p>
+<p>Good bless us and our relationship and our love forever 🧿✨</p>
+<p><strong>I loveeeeeeee youuuuuuu betuuuuuuu 🌸💖✨</strong></p>
+</div>
+<img src="image7.gif">
+</div>
+
+<img id="sadGif">
+
+<script>
+let escaped=false;
+const noBtn=document.getElementById("no");
+const yesBtn=document.getElementById("yes");
+const sadGif=document.getElementById("sadGif");
+const main=document.getElementById("main");
+const success=document.getElementById("success");
+
+const phrases = [
+  "achhiyaaaaaa? 😾",
+  "dubara soch lo babuuu🥺",
+  "nhi peecha chhuda skte 😈",
+  "Pleamseeeee 🥺",
+  "kyaaa hainn 😒🔪",
+  "tod diya naa dil 🙂💔",
+  "confirm hain tera mera khatam hain 🙂💔",
+  "sochlo ek baar aur bhai 😒🔪",
+  "sharam to nhi aa rhi hogi naa 🙂💔",
+  "babuuuu pleamseee naa 🥺",
+  "kitna tadpaaoge 😔💔",
+  "maannn bhi ja meri maa🙂"
+  "aapko meri kasam 🥺😒🔪"
+  "acha bhai kasam bhi nhi maani koiii nhi tadoaalo 🥺💔"
+];
+
+
+const gifs=[
+ "image2.gif",
+ "image3.gif",
+ "image4.gif",
+ "image5.gif",
+ "image6.gif"
+];
+
+let i=0;
+let g=0;
+
+function moveNo(){
+
+ if(!escaped){
+   noBtn.style.position="fixed";
+   escaped=true;
+ }
+
+ const x=Math.random()*(window.innerWidth-noBtn.offsetWidth);
+ const y=Math.random()*(window.innerHeight-noBtn.offsetHeight);
+
+ noBtn.style.left=x+"px";
+ noBtn.style.top=y+"px";
+
+ noBtn.innerText=phrases[i++%phrases.length];
+
+ sadGif.src=gifs[g++%gifs.length];
+ sadGif.style.display="block";
+ sadGif.style.left=x+"px";
+ sadGif.style.top=(y-140)+"px";
+}
+
+
+noBtn.addEventListener("mouseenter",moveNo);
+noBtn.addEventListener("click",moveNo);
+
+// YES click
+yesBtn.onclick=e=>{
+
+ for(let i=0;i<6;i++){
+   const p=document.createElement("div");
+   p.className="pop";
+   p.style.left=e.clientX+"px";
+   p.style.top=e.clientY+"px";
+   document.body.appendChild(p);
+   setTimeout(()=>p.remove(),800);
+ }
+
+ setTimeout(()=>{
+   main.style.display="none";
+   sadGif.style.display="none";
+   success.style.display="block";
+ },900);
+};
+
+</script>
+
+</body>
+</html>
